@@ -10,7 +10,7 @@ import user from '../../assets/images/user.svg'
 
 const Header = () => {
 
-    const {products, setSearchVal, searchData} = useContext(CustomContext)
+    const {products, setSearchVal, searchVal, searchData} = useContext(CustomContext)
 
     return (
         <header className="header">
@@ -71,14 +71,16 @@ const Header = () => {
                     </label>
                     <label className="header__search">
                         <img src={search} alt="Search"/>
-                        <input onChange={({target: {value}}) => setSearchVal(value)} type="text" placeholder="Найти товар"/>
+                        <input onChange={({target: {value}}) => setSearchVal(value)} type="text"
+                               placeholder="Найти товар"/>
                     </label>
-                    {searchData.length > 0 && (
-                        <ul>{searchData.map((item) => (
-                            <li>{item.title}</li>
-                        ))}</ul>
-
-                    )}
+                    {searchData.length ? (
+                        <ul>
+                            {searchData.map((item) => (
+                                <li key={item.id}>{item.title}</li>
+                            ))}
+                        </ul>
+                    ) : ''}
                     <button className="header__label header__label-basket">
                         <img src={basket} alt="Basket"/>
                         <div className="header__count">

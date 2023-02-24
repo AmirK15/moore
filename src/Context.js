@@ -19,7 +19,7 @@ export const Context = (props) => {
     }, [])
 
     useEffect(() => {
-        searchVal && axios(`http://localhost:8080/products?title_like=${searchVal}`).then(({data}) => setSearchData(data))
+        searchVal ? axios(`http://localhost:8080/products?title_like=${searchVal}`).then(({data}) => setSearchData(data)) : setSearchData([])
     }, [debouncedSearchVal])
 
     const minusProduct = (id) => {
