@@ -73,14 +73,20 @@ const Header = () => {
                         <img src={search} alt="Search"/>
                         <input onChange={({target: {value}}) => setSearchVal(value)} type="text"
                                placeholder="Найти товар"/>
+                        {
+                            searchData.length ?
+                                <div className="header__products" >
+                                    {searchData.map(item => (
+                                        <ul key={item.id}>
+                                            <li>
+                                                <img src={item.image} alt={item.title}/>
+                                            </li>
+                                            <li>{item.title}</li>
+                                        </ul>
+                                    ))}
+                                </div> : ''
+                        }
                     </label>
-                    {searchData.length ? (
-                        <ul>
-                            {searchData.map((item) => (
-                                <li key={item.id}>{item.title}</li>
-                            ))}
-                        </ul>
-                    ) : ''}
                     <button className="header__label header__label-basket">
                         <img src={basket} alt="Basket"/>
                         <div className="header__count">

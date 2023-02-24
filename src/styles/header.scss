@@ -71,6 +71,7 @@
     }
   }
   &__search{
+    position: relative;
     max-width: 741px;
     width: 100%;
     padding: 17px 22px;
@@ -89,6 +90,25 @@
       line-height: 17px;
       letter-spacing: 0.01em;
       color: #333333;
+    }
+  }
+  &__products{
+    padding: 0 15px;
+    background: #e3e3e3;
+    position: absolute;
+    top: 53px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    & ul{
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+      border-bottom: 2px solid #cecbcb;
+    }
+    & li{
+      margin: 15px 0;
     }
   }
   &__label{
