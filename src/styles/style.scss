@@ -1,0 +1,18 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  color: #333333;
+  transition: all 0.3s;
+}
+
+.container{
+  max-width: 1288px;
+  margin: 0 auto;
+}
+
+@import "header";
+@import "order";

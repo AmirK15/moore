@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "image": "./products/card1.png",
+      "title": "Lorem ipsum dolor sit amet consectetur. Duis",
+      "article": "L434-GH43",
+      "price": 420,
+      "count": 1
+    },
+    {
+      "id": 2,
+      "image": "./products/card2.png",
+      "title": "Lorem ipsum dolor sit amet ",
+      "article": "L434-GH43",
+      "price": 420,
+      "count": 1
+    },
+    {
+      "id": 3,
+      "image": "./products/card3.png",
+      "title": "Lorem ipsum dolor sit amet consectetur. Dictum venenatis porta at mus sit congue mi ultrices metus. Egestas varius morbi dictumst at egestas amet egestas. Lacus metus netus aliquet ac ipsum pulvinar amet.",
+      "article": "L434-GH43",
+      "price": 10000,
+      "priceSale": 11000,
+      "count": 1
+    }
+  ]
+}
